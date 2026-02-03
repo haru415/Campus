@@ -53,7 +53,7 @@ function render() {
 
             <div class="memo-area">
                 <strong>メモ:</strong><br>
-                <span contenteditable="true" onblur="updateMemo('${sub.id}', this.innerText)">${sub.memo || 'タップしてメモを入力...'}</span>
+                <span contenteditable="true" onblur="updateMemo('${sub.id}', this.innerText)">${sub.memo || ''}</span>
             </div>
             <button class="delete-btn" onclick="deleteSubject('${sub.id}')" style="margin-top:10px; font-size:10px; color:#ccc; border:none; background:none; cursor:pointer; width:100%; text-align:right;">講義を削除</button>
         `;
