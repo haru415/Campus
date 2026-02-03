@@ -1,0 +1,72 @@
+:root {
+    --primary: #007AFF;
+    --safe: #34C759;    /* 青（安全） */
+    --warning: #FFCC00; /* 黄（注意） */
+    --danger: #FF3B30;  /* 赤（危険） */
+    --bg: #F2F2F7;
+}
+
+body {
+    font-family: -apple-system, sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+}
+
+header {
+    background: white;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    position: sticky; top: 0; z-index: 100;
+}
+
+.day-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.day-tabs button {
+    border: none;
+    background: #E5E5EA;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.day-tabs button.active {
+    background: var(--primary);
+    color: white;
+}
+
+.card {
+    background: white;
+    margin: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-left: 8px solid #ccc; /* 危険度で色が変わる部分 */
+}
+
+/* 危険度別ボーダー */
+.border-safe { border-left-color: var(--safe); }
+.border-warning { border-left-color: var(--warning); }
+.border-danger { border-left-color: var(--danger); }
+
+.memo-area {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+    background: #F9F9F9;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.alert-text {
+    font-weight: bold;
+    font-size: 0.85em;
+    margin: 5px 0;
+}
+
+.add-form { display: flex; gap: 5px; }
+.primary-btn { background: var(--primary); color: white; border: none; padding: 10px; border-radius: 8px; }
