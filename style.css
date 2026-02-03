@@ -66,6 +66,25 @@ header {
     font-weight: bold;
     font-size: 0.85em;
     margin: 5px 0;
+
+    /* メモエリアの基本スタイル */
+.memo-area span {
+    display: block;
+    min-height: 1.2em;
+    outline: none;
+}
+
+/* spanが空（かつフォーカスされていない）の時に「擬似要素」でヒントを表示 */
+.memo-area span:empty:before {
+    content: "タップしてメモを入力...";
+    color: #ccc;
+    cursor: text;
+}
+
+/* 入力中（フォーカス時）はヒントを消す */
+.memo-area span:focus:before {
+    content: "";
+}
 }
 
 .add-form { display: flex; gap: 5px; }
